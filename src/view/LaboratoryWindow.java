@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 public class LaboratoryWindow extends javax.swing.JFrame {
 
     //variables
-    Color green;
+    Color buttonColor;
     Laboratory laboratory;
     boolean[] added;
     JButton[] buttons;
@@ -21,7 +21,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
     public LaboratoryWindow(Laboratory lab, CentralWindow vp) {
         added = new boolean[16];
         buttons = new JButton[16];
-        green = new Color(178, 248, 160);
+        buttonColor = new Color(255, 137, 6);
         laboratory = lab;
         centralWindow = vp;
         initComponents();
@@ -54,11 +54,11 @@ public class LaboratoryWindow extends javax.swing.JFrame {
         }
         if (laboratory.has(pc)) {
             added[i] = true;
-            buttons[i].setText("PC" + pc.getId());
+            buttons[i].setText("" + pc.getId());
             buttons[i].setFont(new Font("Arial", Font.BOLD, 9));
             buttons[i].setIcon(new ImageIcon("src/images/turned_on.png"));
             if (i < 15) {
-                changeColor(buttons[i + 1], green);
+                changeColor(buttons[i + 1], buttonColor);
             }
             changeColor(buttons[i], Color.white);
         }
@@ -95,12 +95,12 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
 
             if (i < 15) {
-                changeColor(buttons[i + 1], green);
+                changeColor(buttons[i + 1], buttonColor);
             }
             changeColor(buttons[i], Color.white);
         }
         if (i == 0) {
-            changeColor(buttons[0], green);
+            changeColor(buttons[0], buttonColor);
         }
     }
 
@@ -160,12 +160,13 @@ public class LaboratoryWindow extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(214, 246, 252));
+        jPanel2.setBackground(new java.awt.Color(15, 14, 23));
 
         titulo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titulo.setForeground(new java.awt.Color(51, 51, 51));
+        titulo.setForeground(new java.awt.Color(255, 255, 254));
         titulo.setText("Laboratory 1");
 
+        pc1.setBackground(new java.awt.Color(167, 169, 190));
         pc1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc1.setText("+");
         pc1.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +175,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc2.setBackground(new java.awt.Color(167, 169, 190));
         pc2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc2.setText("+");
         pc2.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +184,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc3.setBackground(new java.awt.Color(167, 169, 190));
         pc3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc3.setText("+");
         pc3.addActionListener(new java.awt.event.ActionListener() {
@@ -190,6 +193,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc4.setBackground(new java.awt.Color(167, 169, 190));
         pc4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc4.setText("+");
         pc4.addActionListener(new java.awt.event.ActionListener() {
@@ -198,6 +202,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc5.setBackground(new java.awt.Color(167, 169, 190));
         pc5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc5.setText("+");
         pc5.addActionListener(new java.awt.event.ActionListener() {
@@ -206,6 +211,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc6.setBackground(new java.awt.Color(167, 169, 190));
         pc6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc6.setText("+");
         pc6.addActionListener(new java.awt.event.ActionListener() {
@@ -214,6 +220,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc7.setBackground(new java.awt.Color(167, 169, 190));
         pc7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc7.setText("+");
         pc7.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +229,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc8.setBackground(new java.awt.Color(167, 169, 190));
         pc8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc8.setText("+");
         pc8.addActionListener(new java.awt.event.ActionListener() {
@@ -230,6 +238,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc10.setBackground(new java.awt.Color(167, 169, 190));
         pc10.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc10.setText("+");
         pc10.addActionListener(new java.awt.event.ActionListener() {
@@ -238,6 +247,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc9.setBackground(new java.awt.Color(167, 169, 190));
         pc9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc9.setText("+");
         pc9.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +256,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc11.setBackground(new java.awt.Color(167, 169, 190));
         pc11.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc11.setText("+");
         pc11.addActionListener(new java.awt.event.ActionListener() {
@@ -254,6 +265,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc12.setBackground(new java.awt.Color(167, 169, 190));
         pc12.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc12.setText("+");
         pc12.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +282,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc13.setBackground(new java.awt.Color(167, 169, 190));
         pc13.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc13.setText("+");
         pc13.addActionListener(new java.awt.event.ActionListener() {
@@ -278,6 +291,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc14.setBackground(new java.awt.Color(167, 169, 190));
         pc14.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc14.setText("+");
         pc14.addActionListener(new java.awt.event.ActionListener() {
@@ -286,6 +300,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc15.setBackground(new java.awt.Color(167, 169, 190));
         pc15.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc15.setText("+");
         pc15.addActionListener(new java.awt.event.ActionListener() {
@@ -294,6 +309,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
             }
         });
 
+        pc16.setBackground(new java.awt.Color(167, 169, 190));
         pc16.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         pc16.setText("+");
         pc16.addActionListener(new java.awt.event.ActionListener() {
@@ -303,7 +319,7 @@ public class LaboratoryWindow extends javax.swing.JFrame {
         });
 
         labelTotalConsumptionLaboratory.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        labelTotalConsumptionLaboratory.setForeground(new java.awt.Color(255, 51, 51));
+        labelTotalConsumptionLaboratory.setForeground(new java.awt.Color(255, 137, 6));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

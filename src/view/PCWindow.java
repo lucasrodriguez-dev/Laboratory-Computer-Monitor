@@ -24,7 +24,7 @@ public class PCWindow extends javax.swing.JFrame {
         } else {
             estado.setText("Turned off");
             estado.setForeground(Color.red);
-            jPanel1.setBackground(new Color(246, 172, 172));
+            jPanel1.setBackground(new Color(242, 95, 76));
         }
         consumo.setText(pc.calculateConsumption(pc.getVoltage(), pc.getCurrent(), pc.getTime()) + "W/h");
         titulo.setText("PC " + pc.getId());
@@ -70,7 +70,7 @@ public class PCWindow extends javax.swing.JFrame {
             }
         });
 
-        apagaEncender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/apagarEncender.png"))); // NOI18N
+        apagaEncender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/switch_turned.png"))); // NOI18N
         apagaEncender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apagaEncenderActionPerformed(evt);
